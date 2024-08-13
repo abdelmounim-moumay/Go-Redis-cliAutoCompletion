@@ -2,6 +2,19 @@
     "vlan_id": 100,
     "sip_profile": 1,
     "allowed_source_ips": [
+        {
+            "name": " obs_dev_pl_customer",
+            "monitor": false,
+            "ips": [
+              {
+                "ip": "172.22.237.86",
+                "port": 5060
+                
+              }
+            ],
+            "peer_name": "obs_dev_pl_session_router"
+
+        },
       {
         "name": "obs_dev_cisco_tnu",
         "monitor": false,
