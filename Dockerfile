@@ -20,4 +20,4 @@ COPY --from=builder /tmp/completion.sh /etc/bash_completion.d/rediscli
 ENTRYPOINT ["rediscli"]
 
 
-CMD ["--help"]
+CMD ["bash", "--init-file", "/etc/bash_completion.d/rediscli"]
