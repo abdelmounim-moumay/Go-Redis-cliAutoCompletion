@@ -11,11 +11,11 @@ import (
 
 var setCmd = &cobra.Command{
 	Use:   "set [name] [subparam]",
-	Short: "Configure and save parameters based on the JSON file",
-	Args:  cobra.MinimumNArgs(0), // Permet de ne pas exiger d'argument
+	Short: " save parameters based on the JSON file to Redis ",
+	Args:  cobra.MinimumNArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
-			// Si aucun argument n'est fourni, affiche la liste des noms disponibles
+
 			fmt.Println("Liste des noms disponibles:")
 			for _, allowedIP := range config.AllowedSourceIPs {
 				fmt.Println("- " + strings.TrimSpace(allowedIP.Name))
@@ -107,7 +107,7 @@ func setCmdCompletion(cmd *cobra.Command, args []string, toComplete string) ([]s
 			}
 		}
 	} else if len(args) == 1 {
-		// Deuxième argument (subparam) auto-complétion
+
 		name := args[0]
 		var selectedIP *AllowedSourceIP
 
