@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  myredsiapp:
+    image: 677276101053.dkr.ecr.eu-north-1.amazonaws.com/myredisapp:2
+    
+
+  redis-server-stackm:
+    image: redis/redis-stack:latest
+    ports:  
+      - 6379:6379
+      - 8000:8001
+    volumes: 
+      - redis-data:/data/db
+    
+volumes:
+  redis-data:
+    driver: local

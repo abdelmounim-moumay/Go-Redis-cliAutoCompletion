@@ -1,0 +1,100 @@
+{
+    "vlan_id": 100,
+    "sip_profile": 1,
+    "allowed_source_ips": [
+        {
+            "name": " obs_dev_pl_customer",
+            "monitor": false,
+            "ips": [
+              {
+                "ip": "172.22.237.86",
+                "port": 5060
+                
+              }
+            ],
+            "peer_name": "obs_dev_pl_session_router"
+
+        },
+      {
+        "name": "obs_dev_cisco_tnu",
+        "monitor": false,
+        "sites": [
+          {
+            "t1t7": 2285001,
+            "sepId": 11,
+            "downStreamPrefix": 4,
+            "ips": [
+              {
+                "ip": "172.22.233.17",
+                "port": 5060
+              }
+            ]
+          }
+        ],
+        "codecs": [
+          {
+            "name": "PCMA",
+            "id": 8
+          },
+          {
+            "name": "G729",
+            "id": 18
+          }
+        ],
+        "peer_name": "obs_dev_session_router"
+      },
+      {
+        "name": "obs_dev_mts_cust",
+        "monitor": false,
+        "sites": [
+          {
+            "t1t7": 2285001,
+            "sepId": 11,
+            "downStreamPrefix": 4,
+            "ips": [
+              {
+                "ip": "10.0.52.6",
+                "port": 5060
+              }
+            ]
+          }
+        ],
+        "peer_name": "obs_dev_mts_infra"
+      },
+      {
+        "name": "obs_dev_sipp_cust",
+        "monitor": false,
+        "sites": [
+          {
+            "t1t7": 5555555,
+            "sepId": 11,
+            "downStreamPrefix": 4,
+            "ips": [
+              {
+                "ip": "10.0.52.4",
+                "port": 5080,
+                "role": "nominal"
+              },
+              {
+                "ip": "10.0.52.5",
+                "port": 5080,
+                "role": "backup"
+              }
+            ]
+          }
+        ],
+        "codecs": [
+          {
+            "name": "PCMA",
+            "id": 8
+          },
+          {
+            "name": "G729",
+            "id": 18
+          }
+        ],
+        "peer_name": "obs_dev_sipp_infra"
+      }
+    ]
+  }
+  
