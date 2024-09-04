@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: '3.8'
 
 services:
@@ -16,3 +17,17 @@ services:
 volumes:
   redis-data:
     driver: local
+=======
+version: '3.8'
+
+services:
+ 
+  redis-server-stackm:
+    image: redis/redis-stack:latest
+    ports:
+      - 6379:6379
+      - 8001:8001
+    volumes: 
+      - /path/to/local/data:/root/redis
+      - /path/to/local/redis.conf:/usr/local/etc/redis/redis.conf
+>>>>>>> e3476a6ccf315f8b7a4b2102ad12dfe1acb61df1
