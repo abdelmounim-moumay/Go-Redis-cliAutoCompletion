@@ -85,7 +85,7 @@ func init() {
 
 	// Ajout de getCmd et loadCmd
 	rootCmd.AddCommand(getCmd)
-	rootCmd.AddCommand(loadCmd) // Ajout de la commande loadCmd
+	rootCmd.AddCommand(loadCmd) 
 }
 
 func initConfig() {
